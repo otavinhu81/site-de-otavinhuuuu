@@ -1,0 +1,211 @@
+
+        body {
+            background-color: #202124;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        .p1 {
+            color: orange;
+            font-size: 24px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #333333;
+            border: 3px solid orange;
+            box-shadow: 2px 2px 5px black;
+        }
+        .p2 {
+            color: orangered;
+        }
+        li {
+            color: yellow;
+            background-color: #333333;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .jogos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .jogos li {
+            width: 180px;
+            border: 5px solid blue;
+            box-shadow: 3px 3px 12px black;
+            transition: scale 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border 0.5s ease-in-out, color 0.5s ease-in-out,rotate 1s ease-in-out;
+            border-radius: 12px;
+            color: blue;
+            background-color: black;
+            animation: entrada 0.5s ease-out;
+            animation-fill-mode: backwards;
+        }
+        .jogos li:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+        .jogos li:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .jogos li:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+        .jogos li:hover {
+            scale: 1.10;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px white;
+            background-color: purple;
+            border : 5px solid orangered;
+            color: orangered;
+            rotate: 360deg;
+        }
+        .jogos img {
+            transition: scale 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+            border-radius: 8px;
+        }
+        .jogos img:hover {
+            scale: 1.10;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px orangered;
+            filter: brightness(120%);
+            animation: pulsar 1s infinite;
+        }
+        a {
+            color: green;
+        }
+        a:hover {
+            color: yellow;
+            cursor: pointer;
+        }
+        .ver {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid white;
+            box-shadow: 2px 2px 5px black;
+            transition: scale 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+        }
+        .ver:hover {
+            cursor: pointer;
+            scale: 1.05;
+            background-color: purple;
+            color: yellow;
+            border: 2px solid orangered;
+            box-shadow: 2px 2px 8px orangered;
+        }
+        .secao1 {
+            background-color: orangered;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 4px 4px 12px black;
+            border: 10px solid purple;
+            margin: 0px auto;
+            max-width: 800px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        .ts1 {
+            color: black;
+        }
+        .tpb {
+            background-color: orangered;
+            border: 5px solid purple;
+            border-radius: 8px;
+            box-shadow: 4px 4px 12px black;
+            max-width: 300px;
+            max-height: 600px;
+            transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out;
+        }
+        .tp {
+            color: purple;
+            transition: color 0.5s ease-in-out;
+        }
+        .tpb:hover {
+            cursor: pointer;
+            background-color: purple;
+            border: 5px solid orangered;
+            .tp{
+                color: orangered;
+            }
+        }
+        .finalb {
+            background-color: black;
+            border: 5px solid white;
+            border-radius: 8px;
+            box-shadow: 4px 4px 12px white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        }
+        .final {
+            color: white;
+            transition: color 0.5s ease-in-out;
+            margin: 0px;
+        }
+        .finalb:hover {
+            background-color: white;
+            border: 5px solid black;
+            box-shadow: 4px 4px 12px black;
+            .final {
+                color: black;
+            }
+        }
+        .ph {
+            color: red;
+            font-size: 18px;
+        }
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.10);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes entrada {
+            0% {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+            10% {
+                transform: scale(o.3);
+                opacity: 0.2;
+            }
+            20% {
+                transform: scale(0.6);
+                opacity: 0.4;
+            }
+            50% {
+                transform: scale(0.8);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 600px) {
+            .tp {
+                font-size: 25px;
+            }
+            .secao1 {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .jogos li {
+                width: 100px;
+            }
+            .jogos img {
+                max-width: 70%;
+            }
+        }
